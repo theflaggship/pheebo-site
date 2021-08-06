@@ -8,7 +8,7 @@ routes:
   - team
 
  pheebo apps ('/pheeboapps')
-  - pheebo.tv , rabbitar, random sticker
+  - pheebo.tv , rabbitar, random stickers app
 
  contract app ('/contractapp/')
  - portfolio site with screenshots and info for each app
