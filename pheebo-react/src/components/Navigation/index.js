@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import './Navigation.css'
+import ContactUsModal from "../ContactUsModal"
 
 function Navigation() {
     return (
@@ -12,7 +13,7 @@ function Navigation() {
                 <NavLink to='/about' className='nav-about'>About</NavLink>
                 <NavLink to='/pheebo-apps' className='nav-pheebo-apps'>Pheebo Apps</NavLink>
                 <NavLink to='/contract-work' className='nav-contract-work'>Contract Work</NavLink>
-                <button className='nav-contact'>Contact Us</button>
+                <ContactUsModal />
             </div>
         </div>
     )
