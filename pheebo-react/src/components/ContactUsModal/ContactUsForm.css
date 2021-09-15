@@ -1,0 +1,73 @@
+.contact-us-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: "Dosis", sans-serif;
+  background-color: #e8cd01;
+  border-radius: 20px;
+}
+
+.contact-us-h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.contact-us-label {
+  font-size: 18px;
+  padding-top: 4px;
+}
+
+.contact-us-inputs {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-us-input {
+  margin-left: 20px;
+  width: 260px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  font-family: "Dosis", sans-serif;
+  word-spacing: 2px;
+}
+
+.contact-us-textarea {
+  width: 260px;
+  resize: none;
+  height: 120px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: "Dosis", sans-serif;
+  word-spacing: 2px;
+}
+
+.contact-us-input:focus,
+.contact-us-textarea:focus {
+  outline: none;
+}
+
+.contact-us-btn {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid rgb(57, 57, 57);
+  padding: 10px 20px;
+  background-color: rgb(57, 57, 57);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-us-btn:hover {
+  background-color: white;
+  color: rgb(57, 57, 57);
+  cursor: pointer;
+}

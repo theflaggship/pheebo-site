@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './ContactUsForm.css'
 import emailjs from 'emailjs-com'
 
-function ContactUsForm() {
+function ContactUsForm({setShowModal}) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -10,9 +10,7 @@ function ContactUsForm() {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        const templateParams = {
-            name, email, message
-        }
+
         const errs = []
 
         if (!name) errs.push('Please provide a value for name.')
@@ -20,19 +18,21 @@ function ContactUsForm() {
         if (!message) errs.push('Please provide a value for message.')
         setErrors(errs)
 
-        if (!errors) {
-            emailjs.send('gmail', process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_USER_ID)
-                .then(function (response) {
+        if (!errs.length) {
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+                .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
-                }, function (error) {
-                    console.log('FAILED...', error);
-                });
+                    setShowModal(false)
+                })
+                // ,(error) => {
+                //     console.log('FAILED...', error);
+                // });
         }
     }
 
     return (
         <div className='contact-us-form-div'>
-            <form onSubmit={onSubmit}>
+            <form className='contact-us-form' onSubmit={onSubmit}>
                 <div className='contact-us-content'>
                     <div className='contact-us-h3-container'>
                         <h3 className='contact-us-h3'>Contact Us</h3>
@@ -48,7 +48,7 @@ function ContactUsForm() {
                     </div>
                     <div className='contact-us-inputs'>
                         <div>
-                            <div className='contact-us-name-input'>
+                            <div className='contact-us-inputs'>
                                 <label
                                     className='contact-us-label'
                                     htmlFor='name'>
@@ -63,7 +63,7 @@ function ContactUsForm() {
                                 >
                                 </input>
                             </div>
-                            <div className='contact-us-email-input'>
+                            <div className='contact-us-inputs'>
                                 <label
                                     className='contact-us-label'
                                     htmlFor='email'>
@@ -78,20 +78,20 @@ function ContactUsForm() {
                                 >
                                 </input>
                             </div>
-                            <div className='contact-us-message-input'>
+                            <div className='contact-us-inputs'>
                                 <label
                                     className='contact-us-label'
                                     htmlFor='message'>
                                     Message:
                                 </label>
-                                <input
-                                    className='contact-us-input'
+                                <textarea
+                                    className='contact-us-textarea'
                                     name='message'
                                     type='message'
                                     value={message}
                                     onChange={e => setMessage(e.target.value)}
                                 >
-                                </input>
+                                </textarea>
                             </div>
                         </div>
                     </div>

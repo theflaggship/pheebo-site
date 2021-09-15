@@ -10,7 +10,7 @@ function ContactUsModal() {
             <button id='contact-us-btn' onClick={() => setShowModal(true)}>Contact Us</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
-                    <ContactUsForm />
+                    <ContactUsForm setShowModal={setShowModal} />
                 </Modal>
             )}
         </>
