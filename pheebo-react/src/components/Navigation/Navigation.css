@@ -1,25 +1,33 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 10px 100px 10px 60px;
+  padding: 0px 40px 10px 40px;
   align-items: center;
 }
 
 .nav-logo {
-  width: 200px;
+  width: 220px;
   height: auto;
 }
 
+.nav-logo-container {
+  display: flex;
+  align-items: flex-end;
+  height: 55px;
+  padding-top: 30px;
+}
+
 .nav-links {
-  width: 800px;
+  width: 620px;
   margin-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 50px;
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-family: "Dosis", sans-serif;
   font-size: 22px;
@@ -29,7 +37,7 @@
 
 .nav-links a:hover {
   padding-bottom: 5px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
 }
 
 .nav-links button {
@@ -44,8 +52,9 @@
 }
 
 .nav-links button:hover {
-  background-color: #2e2c2c;
-  color: rgb(232, 205, 0);
+  background-color: white;
+  color: black;
+  border: 2px solid black;
   cursor: pointer;
 }
 
