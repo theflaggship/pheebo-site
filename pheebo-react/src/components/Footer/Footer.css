@@ -1,6 +1,58 @@
 .footer {
   background-color: rgb(232, 205, 0);
-  height: 100px;
+  height: 120px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.footer-contact-info {
+  display: flex;
+  margin-bottom: 30px;
+  color: rgb(119, 2, 203);
+  font-family: "Dosis", sans-serif;
+}
+
+.footer-contact-info a {
+  color: rgb(119, 2, 203);
+  margin-left: 30px;
+  text-decoration: none;
+  word-spacing: 2px;
+}
+
+.footer-copyright {
+  display: flex;
+  font-family: "Dosis", sans-serif;
+  word-spacing: 2px;
+}
+
+.footer-copyright div {
+  margin-right: 20px;
+}
+
+.footer-copyright a {
+  text-decoration: none;
+  color: rgb(119, 2, 203);
+}
+
+div .copyright-divider {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(119, 2, 203);
+}
+
+.fa-facebook {
+  color: #2e52a0;
+  font-size: 20px;
+}
+
+.fa-twitter {
+  color: rgb(0, 166, 255);
+  font-size: 20px;
+}
+
+.fa-youtube {
+  color: red;
+  font-size: 20px;
 }
