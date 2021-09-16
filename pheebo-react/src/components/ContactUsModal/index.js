@@ -7,7 +7,7 @@ function ContactUsModal() {
 
     return (
         <>
-            <button id='contact-us-btn' onClick={() => setShowModal(true)}>Contact Us</button>
+            <button id='contact-us-btn' onClick={() => setShowModal(true)}>contact us</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <ContactUsForm setShowModal={setShowModal} />

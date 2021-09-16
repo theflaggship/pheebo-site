@@ -71,3 +71,10 @@
   color: black;
   cursor: pointer;
 }
+
+#contact-us-btn {
+  word-spacing: 2px;
+  font-size: 19px;
+  border-radius: 25px;
+  padding-top: 5px;
+}

@@ -9,10 +9,10 @@ function Navigation() {
                 <img src='https://i.imgur.com/ECiuoDw.png' className='nav-logo' alt='pheebo logo' />
             </div>
             <div className='nav-links'>
-                <NavLink to='/' className='nav-home'>Home</NavLink>
-                <NavLink to='/pheebo-apps' className='nav-pheebo-apps'>Pheebo Apps</NavLink>
-                <NavLink to='/contract-work' className='nav-contract-work'>Contract Work</NavLink>
-                <NavLink to='/about' className='nav-about'>About</NavLink>
+                <NavLink to='/' className='nav-home'>home</NavLink>
+                <NavLink to='/pheebo-apps' className='nav-pheebo-apps'>pheebo apps</NavLink>
+                <NavLink to='/contract-work' className='nav-contract-work'>contract work</NavLink>
+                <NavLink to='/about' className='nav-about'>about</NavLink>
                 <ContactUsModal />
             </div>
         </div>
